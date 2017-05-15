@@ -40,6 +40,7 @@
 	        <li><a href="#qualitymetrics">Quality Metrics</a></li>
 
 	        <li><a href="#downloads">Downloads</a></li>
+	        <li><a href="#references">References</a></li>
 	        
 	      </ul>
 	      
@@ -62,8 +63,26 @@
 
 		<h3 id="qualitymetrics" class="page-header">Quality Metrics</h3>
 		<p class="text-justify">
-			Refactoring is a technique commonly applied by developers along software maintenance and evolution. Software refactoring is expected to improve the internal quality attributes of a program, such as coupling and cohesion. However, there is limited understanding of whether and to what extent developers achieve this expectation when they refactor their source code.  In this study, we investigate how refactoring operations affect five well-known internal quality attributes: cohesion, complexity, coupling, inheritance, and size. For this purpose, we analyze the version history of 23 open source projects with 29,303 refactoring operations. Our analysis revealed interesting observations. First, we noticed that developers apply more than 94% of the refactoring operations to program elements with at least one critical internal quality attribute, as opposed to previous work. Second, in 65% of the cases, the related internal quality attributes are improved, and the remaining 35% operations keep the quality attributes unaffected. Third, whenever pure refactoring operations are applied (i.e., the so-called root-canal refactoring), we confirm that internal quality attributes are either frequently improved or at least not worsened. Finally, while refactoring operations often reach other specific aims, such as adding a new feature or fixing a bug, 55% of these operations surprisingly improve internal quality attributes, with only 10% of the quality decline.
+			Software metrics are used for monitoring and improving various processes and products in software engineering. One of the motivations of software measurement arises from the idea that "you cannot control what you cannot measure" (1). The most essential and critical issues involved in monitoring and controlling various elements during software development can be addressed by using software metrics. Metrics are widely used in the field of software engineering to recognize problematic parts of the software that need focused and particular attention. The metrics used in our study are shown in following table.
 		</p>
+		<table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>Description</th>
+                    <th>Improve when</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Coupling Between Objects (CBO)</th>
+                    <td> The number of classes to which a class is coupled </td>
+                    <td> Increases </td>
+                </tr>
+            </tbody>
+        </table>
+
+
 
 		<h3 id="downloads" class="page-header">Downloads</h3>
 		<table class="table table-striped">
@@ -87,6 +106,12 @@
                 </tr>
             </tbody>
         </table>
+
+
+        <h3 id="references" class="page-header">References</h3>
+		<p class="text-justify">
+			[1] DeMarco, T. (1986). Controlling software projects: Management, measurement, and estimates. Prentice Hall PTR.
+		</p>
 
 
 		
