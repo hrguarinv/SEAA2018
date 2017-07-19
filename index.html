@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>SBES2017</title>
+<title>VEM2017</title>
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <script src="js/jquery-3.2.1.min.js"></script>
@@ -37,7 +37,8 @@
 	      <ul class="nav navbar-nav">
 	        <li class="active"><a href="#abstract">Abstract <span class="sr-only">(current)</span></a></li>
 	        
-	        <li><a href="#qualitymetrics">Quality Metrics</a></li>
+	        <li><a href="#qualitymetrics">Coupling Metrics</a></li>
+		<li><a href="#detectionstrategy">Detection Strategy</a></li>
 
 	        <li><a href="#downloads">Downloads</a></li>
 	        <li><a href="#references">References</a></li>
@@ -52,13 +53,13 @@
 	<div class="container container-gral">
 
 		<div class="page-title">
-			<h1>How does refactoring affect internal quality attributes?
-			<br><small>A multi-project study</small></h1>
+			<h1>Do Coupling Metrics Help Characterize Critical Components in Component-based SPL? 
+			<br><small>An Empirical Study</small></h1>
 		</div>
 		
 		<h3 id="abstract" class="page-header">Abstract</h3>
 		<p class="text-justify">
-			Refactoring is a technique commonly applied by developers along software maintenance and evolution. Software refactoring is expected to improve the internal quality attributes of a program, such as coupling and cohesion. However, there is limited understanding of whether and to what extent developers achieve this expectation when they refactor their source code.  In this study, we investigate how refactoring operations affect five well-known internal quality attributes: cohesion, complexity, coupling, inheritance, and size. For this purpose, we analyze the version history of 23 open source projects with 29,303 refactoring operations. Our analysis revealed interesting observations. First, we noticed that developers apply more than 94% of the refactoring operations to program elements with at least one critical internal quality attribute, as opposed to previous work. Second, in 65% of the cases, the related internal quality attributes are improved, and the remaining 35% operations keep the quality attributes unaffected. Third, whenever pure refactoring operations are applied (i.e., the so-called root-canal refactoring), we confirm that internal quality attributes are either frequently improved or at least not worsened. Finally, while refactoring operations often reach other specific aims, such as adding a new feature or fixing a bug, 55% of these operations surprisingly improve internal quality attributes, with only 10% of the quality decline.
+			In component-based software product lines (SPL), each component has to encapsulate SPL functionalities, restrict data access, and be replaceable. For critical components, with multiple functionalities and dependencies, these criteria are fundamental to assure flexible SPL product configuration. Previous work assume that coupling metrics help characterize critical components, but we lack empirical evidence for that assumption. By characterizing critical components, we could help developers identify SPL components that require a very careful maintenance and evolution. This paper relies on five well-known coupling metrics to compose a strategy for characterizing critical components in component-based SPLs. Our results suggest reasonable strategy's accuracy.
 		</p>
 
 		<h3 id="qualitymetrics" class="page-header">Quality Metrics</h3>
