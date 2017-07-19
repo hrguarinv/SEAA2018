@@ -58,13 +58,12 @@
 			
 			
 		</div>
-		<h2>This is heading 2</h2>
 		<h3 id="abstract" class="page-header">Abstract</h3>
 		<p class="text-justify">
 			In component-based software product lines (SPL), each component has to encapsulate SPL functionalities, restrict data access, and be replaceable. For critical components, with multiple functionalities and dependencies, these criteria are fundamental to assure flexible SPL product configuration. Previous work assume that coupling metrics help characterize critical components, but we lack empirical evidence for that assumption. By characterizing critical components, we could help developers identify SPL components that require a very careful maintenance and evolution. This paper relies on five well-known coupling metrics to compose a strategy for characterizing critical components in component-based SPLs. Our results suggest reasonable strategy's accuracy.
 		</p>
 
-		<h3 id="qualitymetrics" class="page-header">Quality Metrics</h3>
+		<h3 id="qualitymetrics" class="page-header">Coupling Metrics</h3>
 		<p class="text-justify">
 
             In order to investigate the impact of refactoring operations on internal quality attributes, we have selected 15 software metrics that capture different aspects of software quality. These metrics as described as follows.
@@ -75,144 +74,34 @@
                 <tr>
                     <th>Metric</th>
                     <th>Description</th>
-                    <th>Improve when</th>
+                   
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <th scope="row">Coupling Between Objects (CBO) <a href="#references">[1]</a></th>
-                    <td> The number of classes to which a class is coupled </td>
-                    <td> Decreases </td>
+                    <td> Number of components coupled to one specific component </td>
+           
                 </tr>
                 <tr>
                     <th scope="row">Fan-in (FANIN) <a href="#references">[2]</a></th>
-                    <td> The number of other classes that reference a class </td>
-                    <td> Decreases </td>
+                    <td> Number of dependencies from other components to a specific component </td>
+                   
                 </tr>
                 <tr>
                     <th scope="row">Fan-out (FANOUT) <a href="#references">[2]</a></th>
-                    <td> The number of other classes referenced by a class </td>
-                    <td> Decreases </td>
+                    <td> Number of dependencies from one components to others </td>
+                 
                 </tr>
-                <tr>
-                    <th scope="row">Coupling Intensity (CINT) <a href="#references">[3]</a></th>
-                    <td> The number of distinct operations called by the measured operation </td>
-                    <td> Decreases </td>
-                </tr>
-                <tr>
-                    <th scope="row">Coupling Dispersion (CDISP) <a href="#references">[3]</a></th>
-                    <td> The number of classes in wich the operations called from the measured operation are defined by </td>
-                    <td> Decreases </td>
-                </tr>
-                <tr>
-                    <th scope="row">Lack of COhesion of Methods 2 (LCOM2) <a href="#references">[1]</a></th>
-                    <td> Number of pairs of methods that do not share attributes, minus the number of pairs of methods that share attributes </td>
-                    <td> Decreases </td>
-                </tr>
-                <tr>
-                    <th scope="row">Lack of COhesion of Methods 3 (LCOM3) <a href="#references">[4]</a></th>
-                    <td> Number of disjoint components in the graph that represents each method as a node and the sharing of at least one attribute as an edge </td>
-                    <td> Decreases </td>
-                </tr>
-                <tr>
-                    <th scope="row">Tight Class Cohesion (TCC) <a href="#references">[5]</a></th>
-                    <td> Ratio of number of similar method pairs to total number of method pairs in the class </td>
-                    <td> Increases </td>
-                </tr>
-                <tr>
-                    <th scope="row">Cyclomatic Complexity (CC) <a href="#references">[6]</a></th>
-                    <td> Measure of the complexity of a module's decision structure  </td>
-                    <td> Decreases </td>
-                </tr>
-                <tr>
-                    <th scope="row">Weighted Method Count (WMC) <a href="#references">[1]</a></th>
-                    <td> The sum of Cyclomatic Complexity <a href="#references">[6]</a> of all methods declared in the given class  </td>
-                    <td> Decreases </td>
-                </tr>
-                <tr>
-                    <th scope="row">Essential Complexity (Evg) <a href="#references">[6]</a></th>
-                    <td> Measure of the degree to which a module contains unstructured constructs  </td>
-                    <td> Decreases </td>
-                </tr>
-                <tr>
-                    <th scope="row">Paths (NPATH) <a href="#references">[7]</a></th>
-                    <td> Number of unique paths though a body of code, not counting abnormal exits or gotos  </td>
-                    <td> Decreases </td>
-                </tr>
-                <tr>
-                    <th scope="row">Nesting (MaxNest)</th>
-                    <td> Maximum nesting level of control constructs  </td>
-                    <td> Decreases </td>
-                </tr>
-                <tr>
                     <th scope="row">Depth of Inheritance Tree (DIT) <a href="#references">[1]</a></th>
-                    <td> The depth of a class as the number of its ancestor classes  </td>
-                    <td> Increases </td>
+                    <td> Maximum depth of a component in the inheritance tree  </td>
+                
                 </tr>
                 <tr>
                     <th scope="row">Number Of Children (NOC) <a href="#references">[1]</a></th>
-                    <td> The number of direct descendants (subclasses) of a class  </td>
-                    <td> Increases </td>
+                    <td> Number of children components of a component </td>
+              
                 </tr>
-                <tr>
-                    <th scope="row">Base Classes (IFANIN) <a href="#references">[9]</a></th>
-                    <td> Number of immediate base classes  </td>
-                    <td> Increases </td>
-                </tr>
-                <tr>
-                    <th scope="row">Override Ratio (OR) <a href="#references">[3]</a></th>
-                    <td> The number of methods of the measured class that override methods from the base class, divided by the total number of methods in the class  </td>
-                    <td> Decreases </td>
-                </tr>
-                <tr>
-                    <th scope="row">Lines of Code (LOC) <a href="#references">[8]</a></th>
-                    <td> The number of lines of code excluding white spaces and comments  </td>
-                    <td> Decreases </td>
-                </tr>
-                <tr>
-                    <th scope="row">Lines with Comments (CLOC) <a href="#references">[8]</a></th>
-                    <td> Number of lines containing comment </td>
-                    <td> Increases </td>
-                </tr>
-
-                <tr>
-                    <th scope="row">Statements (STMTC) <a href="#references">[8]</a></th>
-                    <td> Number of statements </td>
-                    <td> Decreases </td>
-                </tr>
-                <tr>
-                    <th scope="row">Classes (CDL) <a href="#references">[8]</a></th>
-                    <td> Number of classes </td>
-                    <td> Decreases </td>
-                </tr>
-                <tr>
-                    <th scope="row">Instance Variables (NIV) <a href="#references">[8]</a></th>
-                    <td> Number of instance variables </td>
-                    <td> Decreases </td>
-                </tr>
-                <tr>
-                    <th scope="row">Instance Methods (NIM) <a href="#references">[8]</a></th>
-                    <td> Number of instance methods </td>
-                    <td> Decreases </td>
-                </tr>
-                <tr>
-                    <th scope="row">Weight of Class (WOC) <a href="#references">[3]</a></th>
-                    <td> The sum of "funtional" public methods divided by the total number of public members  </td>
-                    <td> Decreases </td>
-                </tr>
-                <tr>
-                    <th scope="row">Number of Public Attributes (NOPA) <a href="#references">[3]</a></th>
-                    <td> The number of publics attributes of a class  </td>
-                    <td> Decreases </td>
-                </tr>
-
-                
-
-
-
-                
-                
-
                 
 
             </tbody>
@@ -268,36 +157,6 @@
         </p>
 
 
-		<p class="text-justify">
-			<strong>[3]</strong> Lanza, M., & Marinescu, R. (2007). <a target="_blank" href="http://www.springer.com/us/book/9783540244295">Object-oriented metrics in practice: using software metrics to characterize, evaluate, and improve the design of object-oriented systems.</a> Springer Science & Business Media.
-		</p>
-
-		<p class="text-justify">
-			<strong>[4]</strong> Li, W., & Henry, S. (1993). <a target="_blank" href="http://www.sciencedirect.com/science/article/pii/016412129390077B">Object-oriented metrics that predict maintainability.</a> Journal of systems and software, 23(2), 111-122.
-		</p>
-
- 		<p class="text-justify">
-			<strong>[5]</strong> Bieman, J. M., & Kang, B. K. (1995, August). <a target="_blank" href="http://dl.acm.org/citation.cfm?id=211856">Cohesion and reuse in an object-oriented system.</a> In ACM SIGSOFT Software Engineering Notes (Vol. 20, No. SI, pp. 259-262). ACM.
-		</p>
-
-		<p class="text-justify">
-			<strong>[6]</strong> McCabe, T. J. (1976). <a target="_blank" href="http://ieeexplore.ieee.org/abstract/document/1702388/">A complexity measure.</a> IEEE Transactions on software Engineering, (4), 308-320.
-		</p>
-
-        <p class="text-justify">
-            <strong>[7]</strong> Nejmeh, B. A. (1988). <a target="_blank" href="http://dl.acm.org/citation.cfm?id=42379">NPATH: a measure of execution path complexity and its applications.</a> Communications of the ACM, 31(2), 188-200.
-        </p>
-
-        <p class="text-justify">
-            <strong>[8]</strong> Lorenz, M., & Kidd, J. (1994). <a target="_blank" href="http://dl.acm.org/citation.cfm?id=SERIES10071.177063">Object-oriented software metrics: a practical guide.</a> Prentice-Hall, Inc.
-        </p>
-
-        <p class="text-justify">
-            <strong>[9]</strong> Destefanis, G., Counsell, S., Concas, G., & Tonelli, R. (2014, May). <a target="_blank" href="http://ai2-s2-pdfs.s3.amazonaws.com/6aaa/98061e487b1e484b55e37bbb99fface3430e.pdf">Software metrics in agile software: An empirical study.</a> In International Conference on Agile Software Development (pp. 157-170). Springer International Publishing.
-        </p>
-
-  
-		
 	</div>
 
 
