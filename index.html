@@ -102,11 +102,12 @@
             </tbody>
         </table>
       
-		<h3 id="detectionstrategy" class="page-header">Detection Strategy</h3>
+		<h3 id="detectionstrategy" class="page-header">Systematic Mapping Results</h3>
 		<p class="text-justify">
-			The figure below presents our metric-based strategy for characterizing critical components. A detection strategy combines multiples metrics to characterize components that satisfy a property, the component criticality in our case. We assume that both FANIN and CBO explicitly capture coupling between critical components. Based on the literature of component-based SPL, a critical component is the one that has too many dependencies with other components, which we can measure with CBO > Threshold and FANIN > Threshold. However, from our viewpoint, FANOUT > Threshold may not suffice to characterize critical components because, considering the SPL architecture, each component tend to use features provided by several other components. However, when a component is deeply located in the inheritance tree and has too many children components, such external dependencies indicated by FANOUT > Threshold may negatively impact on the SPL product configuration, which makes the critical components. Thus, FANOUT has to be combined with DIT > Threshold and NOC > Threshold for capturing critical components.
+			This section presents the results of the mapping study. The first subsection provides an overview of the included papers. The following subsections present an overview of research of security requirements in the context of agile projects.
+			<h4>Overview of the included papers<h4>
 			<center>
-			<input type="image" src="download/DetectionStrategy.png" width="850" height="367">
+			<input type="image" src="download/overview_papers.png" width="200" height="300">
 			</center>
 			
 		<h3 id="downloads" class="page-header">Downloads</h3>
