@@ -77,32 +77,10 @@
 		The rapidly changing business environment in which most companies operate is challenging traditional Requirements Engineering (RE) approaches. The term agile RE has been used to define the ‘‘agile way’’ of conducting RE activities. Security is an essential non-functional requirement that tends to be difficult to address in agile development contexts. The overall understanding of how to handle security requirements in agile contexts is still vague. [Objective] The goal of this paper is to characterize the approaches that have been proposed to handle security requirements in agile software projects. [Method] We conducted a systematic mapping study. In total, we identified 21 studies that met our inclusion criteria, dated from 2005 to 2017. [Results] We found the approaches propose solutions that may be divided into four categories: modify agile method, extend the concept of user story to abuser story, introduce a lightweight methodology and develop a software framework. We also identified some limitations of using these approaches related to environment, people, effort and resources. [Conclusion] Our analysis suggests that more effort needs to be put into empirically evaluating the solutions and develop specialized software tools in order to mitigate the identified limitations.
 		</p>
 
-		<h3 id="qualitymetrics" class="page-header">Systematic Mapping Protocol</h3>
-		<p class="text-justify">
-		In this research a systematic mapping study was performed following the guidelines proposed by Kitchenham and Charters [1]. It was possible to identify the need for the review, to specify the research questions, the research string and the inclusion/exclusion criteria.
-		
-			<h4>A.	Definition of Research Questions</h4>
-		
-			The main research question to be answered by this mapping study is: <B>“RQ1. What are the approaches that have been proposed to handle security requirements in software agile projects?”</B>. The following secondary questions were derived from the primary question in order to further characterize the identified approaches.
-			<br></br>
-			<ol>
-				<li value="SQ1">In the context of which agile methods have the approaches been proposed or applied?</li>
-				<li value="SQ2">In the context of which software requirement activities have the approaches been proposed or applied?</li>
-				<li value="SQ3">How are security requirements handled in each approach?</li>
-				<li value="SQ4">Which kind of empirical evaluations have been performed?</li>
-				<li value="SQ5">Have the approaches been applied in the industry or academic field?</li>
-				<li value="SQ6">What limitations do agile security requirements is facing?</li>
-			</ol>
-	
-			<h4>B.	Search Strategy</h4>
-		
-			The defined search string follows: <i>“((Agililty OR Agile OR Scrum OR Extreme Programming) AND (Security AND Requirements))”</i>. It is noteworthy, that the keywords Scrum and Extreme Programming were included because of the popularity of these agile methods during the last few years [2].
-		
-			<h4>C.	Study Selection</h4>
-			
-			The search returned many papers that were not relevant for this research. Thus, it was necessary to filter out the irrelevant papers, which required a set of criteria as shown below.
-			<br></br>
-			<table class="table table-striped" style="undefined;table-layout: fixed; width: 668px">
+        </table>
+<h3 class="page-header" id="authors">Selected papers</h3>
+
+<table class="table table-striped" style="undefined;table-layout: fixed; width: 668px">
 				<colgroup>
 				<col style="width: 68px">
 				<col style="width: 600px">
@@ -143,183 +121,8 @@
 				    <td class="tg-9hbo">EC4<br>  </td>
 				    <td class="tg-yw4l">Papers that are only available in the form of abstracts/posters and presentations<br>  </td>
 				  </tr>
-			</table>		
-		</p>
-      
-		<h3 id="detectionstrategy" class="page-header">Systematic Mapping Results</h3>
-		<p class="text-justify">
-			This section presents the results of the mapping study. The first subsection provides an overview of the included papers. The following subsections present an overview of research of security requirements in the context of agile projects.
-			<h4>A.  Overview of the included papers</h4>
-	
-			As previously mentioned, we identified 21 studies. The majority of them were published in conferences, journals and symposium as shown in Fig. 2. The largest number of paper, about 55% (12 of them) were published in conferences, 19% (4 of them) in journals, 17% (3 of them) in symposium, 9% (2 only) in workshop and congress.
-			<br></br>
-			<center>
-			<input type="image" src="download/overview_papers.png">
-			</center>
+			</table>	
 
-			<h4>B.  Agile methods that have been proposed or applied</h4>
-
-			According to our study, the main method explored by the researches was Scrum (9 out of 21). XP was proposed in two studies, FDD and DSDM were used only once. It is interesting to observe that a large number of authors propose generic approaches (8 out of 21) that, according to them, are rationally adaptable for all agile methods.
-			<br></br>
-			<center>
-			<input type="image" src="download/AgileMethod.png">
-			</center>
-
-			<h4>C.  Software requirement activities involved</h4>
-
-			Software requirement activities may vary depending on the development context of the projects. The main activity explored by the researches was requirements specification (12 out of 21).
-			<br></br>
-			<center>
-			<input type="image" src="download/RequirementActivity.PNG">
-			</center>
-
-			<h4>D.  How security requirements are handled</h4>
-			
-			We found that the approaches propose solutions that may be divided into five categories: Modify agile method, extend the concept of user story to abuser story, introduce a lightweight methodology, develop a concept model and develop a software framework. On the other hand, we identified the artifacts proposed by authors in order to complement the answer to this specific question. Techniques such as user story, misuse case and attack tree are the most used in the selected studies (13 out of 21). 
-
-			We also identified a set of activities and subjects involve into agile methods such as Acceptance Criteria (AC), Definition of Done (DoD), Risk Assessment (RA), Security Assurance Case (SAC), Security Feature (SF), Case Base Reasoning (CBR), Natural processing language (NPL) and Agile Use Case (AUC).
-
-			<br></br>
-			<div style = "align: center">
-				<div style="float: left; padding-right: 80px">
-				<table class="table table-striped" style="undefined;table-layout: fixed; align: left; width: 350px">
-					<colgroup>
-					<col style="width: 150px">
-					<col style="width: 100px">
-					  <tr>
-					    <th class="tg-9hbo">Artifact</th>
-					    <th class="tg-9hbo">Number of papers</th>
-					  </tr>
-					  <tr>
-					    <td class="tg-yw4l">User/Abuser story</td>
-					    <td class="tg-baqh">11</td>
-					  </tr>
-					  <tr>
-					    <td class="tg-yw4l">Abuse/Misuse case</td>
-					    <td class="tg-baqh">4</td>
-					  </tr>
-					  <tr>
-					    <td class="tg-yw4l">Attack tree</td>
-					    <td class="tg-baqh">3</td>
-					  </tr>
-					  <tr>
-					    <td class="tg-yw4l">NFR story card</td>
-					    <td class="tg-baqh">2</td>
-					  </tr>
-					  <tr>
-					    <td class="tg-yw4l">W8 story card model</td>
-					    <td class="tg-baqh">1</td>
-					  </tr>
-				</table>
-				</div>
-	
-				<div style="float: left; padding-left: 80px">
-				<table class="table table-striped" style="undefined;table-layout: fixed; align: right; width: 350px">
-				<colgroup>
-				<col style="width: 150px">
-				<col style="width: 100px">
-				  <tr>
-				    <th class="tg-9hbo">Activity </th>
-				    <th class="tg-9hbo">Number of papers</th>
-				  </tr>
-				  <tr>
-				    <td class="tg-yw4l">Risk Assesment</td>
-				    <td class="tg-baqh">3</td>
-				  </tr>
-				  <tr>
-				    <td class="tg-yw4l">AUC</td>
-				    <td class="tg-baqh">3</td>
-				  </tr>
-				  <tr>
-				    <td class="tg-yw4l">Natural Processing Language</td>
-				    <td class="tg-baqh">3</td>
-				  </tr>
-				  <tr>
-				    <td class="tg-yw4l">Acceptance Criteria</td>
-				    <td class="tg-baqh">2</td>
-				  </tr>
-				  <tr>
-				    <td class="tg-yw4l">Security Assurance Case</td>
-				    <td class="tg-baqh">2</td>
-				  </tr>
-					<tr>
-				    <td class="tg-yw4l">Definition of Done</td>
-				    <td class="tg-baqh">1</td>
-				  </tr>
-				  <tr>
-				    <td class="tg-yw4l">Security Feature</td>
-				    <td class="tg-baqh">1</td>
-				  </tr>
-				  <tr>
-				    <td class="tg-yw4l">Case Base Reasoning</td>
-				    <td class="tg-baqh">1</td>
-				  </tr>
-				</table>
-			        </div>
-			</div>
-			
-			<br></br>
-			
-			<h4 style="clear: both">E.  Empirical Evaluations performed</h4>
-			
-			In this analysis, it was possible to identify 11 studies that have performed an empirical evaluation; four studies have performed a not empirical evaluation and six studies that had not presented an evaluation. In addition, we identified whether these studies presented a quantitative analysis to determine, in some way, the degree of the evaluation depth. We found that 17 out of 21 selected studies (81%) did not present quantitative analyzes in its evaluations.
-			<div>
-				<div style="float: left; padding-right: 60px">
-					<br></br>
-					<center>
-					<input type="image" src="download/Evaluations.PNG">
-					</center>
-				</div>
-				<div style="float: left; padding-left: 60px">
-					<br></br>
-					<center>
-					<input type="image" src="download/Quantitative.PNG">
-					</center>
-				</div>
-				<div style="float: left; padding-left: 60px">
-					<br></br>
-					<center>
-					<input type="image" src="download/AppliedField.PNG">
-					</center>
-				</div>
-			
-			</div>
-			<h4 style="clear: both">F.  Mapping results obtained</h4>
-
-			It is evident that there are gaps to covers such as the lack of empirically evaluated studies and software framework. In that sense, we present a figure, in order to offer a visualization of the systematic mapping in the form of a bubble chart.
-			
-			<center>
-			<input type="image" src="download/bubbleChart.PNG">
-			</center>
-			
-		<h3 id="downloads" class="page-header">Downloads</h3>
-		<table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Artefact</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td> <a href="download/SEAA2018_Submitted.pdf" target="_blank">Full paper</a></td>
-                    <td> Document1.    
-		   </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td> <a href="download/scopus_SRE_Agility.bib" target="_blank">Scopus results</a></td>
-                    <td> Document2.    
-		   </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td> <a href="download/MappingStudy_Overview.xlsx" target="_blank">Systematic mapping protocol</a></td>
-             <td> Document3.    
-		       </tr>
-           
-            </tbody>
-        </table>
 <h3 class="page-header" id="authors">Authors</h3>
 
     <p>Any question/suggestion please contact the authors of this work.</p>
@@ -355,18 +158,6 @@
         </tr>
       </tbody>
     </table>
-
-        <h3 id="references" class="page-header">References</h3>
-
-		<p class="text-justify">	
-			<strong>[1]</strong> B. Kitchenham, S. Charters. (2007). <a target="_blank" href="https://dl.acm.org/citation.cfm?id=1134500">Guidelines for performing systematic literature reviews in software engineering.</a> Keele University and Durham University Joint Report, Technical Report EBSE 2007-001
-		</p>
-
-        	<p class="text-justify">
-           		 <strong>[2]</strong> T. Dybå, and T. Dingsøyr. (2008). <a target="_blank" href="https://www.sciencedirect.com/science/article/pii/S0950584908000256">Empirical studies of agile software development: A systematic review.</a> IEEE transactions on Software Engineering, Information and software technology 50.9-10: 833-859.
-        	</p>
-
-
 	</div>
 
 </body>
